@@ -15,10 +15,10 @@
         <div class=""></div>
     </div>    
     <div id="corpo">
-        <hr style="border:0.01mm solid #333" />
-        <div>
+        <div style="width: 100%; text-align: center; font-size: 9px;">
             Datas: {{$data_ini}} e {{$data_end}}
         </div>
+        <hr style="border:0.01mm solid #333" />        
         <br />
         @php
             $total_global = 0;
