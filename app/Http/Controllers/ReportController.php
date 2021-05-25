@@ -15,6 +15,7 @@ class ReportController extends Controller
     public function index()
     {
         $datas = $this->model
+            ->has('processes.financials')
             ->with('processes.financials')
             ->select(['id', 'name', 'fantasy'])
             ->get();
