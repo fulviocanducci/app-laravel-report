@@ -58,7 +58,7 @@
                 @empty
                 @endforelse
                 <tr>                    
-                    <td colspan="3" style="text-align:right;margin-right:5">SubTotal:</td>
+                    <td colspan="3" style="text-align:right;margin-right:5"><strong>SubTotal:</strong></td>
                     <td colspan="1" style="text-align:right;">{{App\Helpers\Helper::formatDecimal($credito - $debito,2)}}</td>
                 </tr>
                 @php
@@ -71,7 +71,7 @@
             @endforelse
             <table style="margin-top: 10px; margin-bottom:10px">
                 <tr>
-                    <td style="text-align:right;">Quantidade de processos {{$quant}} no valor Total: {{App\Helpers\Helper::formatDecimal($total, 2)}}</td>
+                    <td style="text-align:right;"><strong>Quantidade de processos </strong>{{$quant}} <strong>no valor Total:</strong> {{App\Helpers\Helper::formatDecimal($total, 2)}}</td>
                 </tr>
             </table>
             @php
