@@ -6,8 +6,8 @@
                 <h1>Ficha Financeira de Processos (Analíticos)</h1>
             </div>
             <div style="float:left;width:20%; text-align:right; height:30px">
-                <p style="margin-top:7px; padding:0">Pagina: 1 de 1</p>
-                <p style="margin: 0; padding:0">{{date("d/m/Y h:i:s")}}</p>
+                <p style="margin-top:7px; padding:0;height:20px"></p>
+                <p style="margin: 0; padding:0; font-size:9px">{{date("d/m/Y h:i:s")}}</p>
             </div>            
         </div>        
     </div>    
@@ -17,8 +17,11 @@
     <div id="corpo">
         <hr style="border:0.01mm solid #333" />
         <br />
+        @php
+            $total_global = 0;
+        @endphp
         @forelse($datas as $data)        
-        <h5>{{$data->fantasy}} - {{$data->name}}</h5>
+        <div style="border: 1px solid #333; padding: 5px;margin-bottom:5px;">{{$data->fantasy}} - {{$data->name}}</div>
             @php
                 $total = 0;
                 $quant = 0;
@@ -68,7 +71,11 @@
                     <td style="text-align:right;">Quantidade de processos {{$quant}} no valor Total: {{App\Helpers\Helper::formatDecimal($total, 2)}}</td>
                 </tr>
             </table>
+            @php
+                $total_global += $total;
+            @endphp
         @empty            
         @endforelse
+        <div><strong>Total Geral:</strong> {{App\Helpers\Helper::formatDecimal($total_global, 2)}}</div>
     </div>
 @endsection

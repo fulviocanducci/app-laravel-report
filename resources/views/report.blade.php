@@ -11,7 +11,7 @@
             margin: 120px 50px 80px 50px;
         }
         body{
-            font-size: 12px;
+            font-size: 11px;
         }
         #footer {
             position: fixed;
@@ -49,9 +49,9 @@
     @yield("body")
     <script type="text/php">
         if (isset($pdf)) {
-            $text = "página {PAGE_NUM} / {PAGE_COUNT}";
+            $text = "Página {PAGE_NUM} / {PAGE_COUNT}";
             $size = 9;
-            $font = $fontMetrics->getFont("courier");
+            $font = $fontMetrics->getFont("times");
             $width = $fontMetrics->get_text_width($text, $font, $size) / 2;
             $x = ($pdf->get_width() - $width) / 2;
             $y = $pdf->get_height() - 35;
