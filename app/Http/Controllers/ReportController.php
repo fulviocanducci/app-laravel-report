@@ -19,7 +19,10 @@ class ReportController extends Controller
             ->select(['id', 'name', 'fantasy'])
             ->get();
 
-        return PDF::loadView('financials', compact('datas'))
+        $data_ini = "03/03/1993";
+        $data_end = "04/03/1993";
+
+        return PDF::loadView('financials', compact('datas', 'data_ini', 'data_end'))
             ->stream();
     }
 }

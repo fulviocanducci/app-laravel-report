@@ -16,6 +16,9 @@
     </div>    
     <div id="corpo">
         <hr style="border:0.01mm solid #333" />
+        <div>
+            Datas: {{$data_ini}} e {{$data_end}}
+        </div>
         <br />
         @php
             $total_global = 0;
@@ -76,6 +79,8 @@
             @endphp
         @empty            
         @endforelse
-        <div><strong>Total Geral:</strong> {{App\Helpers\Helper::formatDecimal($total_global, 2)}}</div>
+        <div style="width:100%; text-align:right; margin-top:20px; border-top:1px solid #111;padding-top:5px;">
+            <strong>Total Geral:</strong>{{App\Helpers\Helper::formatDecimal($total_global, 2)}}
+        </div>
     </div>
 @endsection
