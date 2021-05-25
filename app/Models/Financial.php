@@ -35,6 +35,14 @@ class Financial extends Model
         'honorary'
     ];
 
+    protected $appends = ['value'];
+    protected $cast = ['value' => 'decimal'];
+
+    public function getValueAttribute() 
+    {
+        return $this->attributes['payment'];
+    }
+
     public function rules($id = '')
     {
         return [

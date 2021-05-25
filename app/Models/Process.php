@@ -68,7 +68,7 @@ class Process extends Model
 
     public function financials()
     {
-        return $this->hasMany(Financial::class);
+        return $this->hasMany(Financial::class, 'process_id', 'id');
     }
 
     /**
