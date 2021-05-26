@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/report', [ReportController::class, "index"]);
+Route::get('/test', [ReportController::class, "test"]);
