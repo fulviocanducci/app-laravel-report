@@ -43,4 +43,10 @@ class ReportController extends Controller
         return response()
             ->json($datas, 200);
     }
+
+    public function bootstrap()
+    {
+        return PDF::loadView('bootstrap')
+            ->stream();
+    }
 }

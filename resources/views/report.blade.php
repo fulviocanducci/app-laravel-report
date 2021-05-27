@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório - Test</title>    
+    <link rel="stylesheet" type="text/css"href="/css/bootstrap.css">
     <style>
         @page {
             margin: 120px 50px 80px 50px;
@@ -25,10 +26,10 @@
             background-repeat: no-repeat;
             /*font-size: 25px;*/
             text-align: center;
-            height: 30px;
+            height: 20px;
             width: 100%;
             position: fixed;
-            top: -50px;
+            top: -85px;
             left: 0;
             right: 0;
             margin: auto;
@@ -50,8 +51,8 @@
     <script type="text/php">
         if (isset($pdf)) {
             $text = "Página {PAGE_NUM} / {PAGE_COUNT}";
-            $size = 9;
-            $font = $fontMetrics->getFont("times");
+            $size = 7;
+            $font = $fontMetrics->getFont("helvetica");
             $width = $fontMetrics->get_text_width($text, $font, $size) / 2;
             $x = ($pdf->get_width() - $width) / 2;
             $y = $pdf->get_height() - 35;

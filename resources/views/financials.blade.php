@@ -2,12 +2,12 @@
 @section("body")
     <div id="head">
         <div style="width:100%;">
-            <div style="float:left;width:80%; text-align:center; height:30px; vertical-align:bottom">
+            <div style="float:left;width:86%; text-align:center; height:30px; vertical-align:bottom">
                 <h1>Ficha Financeira de Processos (Analíticos)</h1>
             </div>
-            <div style="float:left;width:20%; text-align:right; height:30px">
+            <div style="float:left;width:14%; text-align:right; height:30px">
                 <p style="margin-top:7px; padding:0;height:20px"></p>
-                <p style="margin: 0; padding:0; font-size:9px">{{date("d/m/Y h:i:s")}}</p>
+                <p style="margin: 0; padding:0; font-size:9px"><smal>{{date("d/m/Y h:i:s")}}</smal></p>
             </div>            
         </div>        
     </div>    
